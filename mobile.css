@@ -1,15 +1,35 @@
 @media (max-width: 1485px) {
-  .product-container {
+  .new-arrivals-wrap, .discount-wrap {
     padding: 0 30px;
   }
 
   .product-container .product {
     width: 45%;
-    /* margin: 30px; */
     cursor: pointer;
   }
   
 }
+
+@media (max-width:1250px) {
+  .discount-wrap .discount-container {
+    
+  }
+  
+  .discount-wrap .discount-container .discount-item {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+}
+
+@media (max-width:1250px) {
+ h2 {
+  display: flex;
+  flex-direction: column;
+  font-size: 28px;
+ }
+}
+
 
 @media (max-width: 910px) {
   .header nav .nav_link {
