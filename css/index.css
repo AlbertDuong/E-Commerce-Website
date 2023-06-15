@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-html {
+html, input, textarea {
   font-family: 'Mulish', sans-serif;
 }
 
@@ -159,6 +159,7 @@ nav .links .item .action-icon {
   height: 90vh;
   width: 100%;
   object-fit: cover;
+  animation: float-social 6s ease-in-out infinite;
 }
 
 .hero-banner .hero-banner_content{
@@ -186,6 +187,7 @@ nav .links .item .action-icon {
   font-size: 18px;
   font-weight: 700;
   min-width: 21%;
+  animation: float 6s ease-in-out infinite;
 }
 
 .hero-banner .carousel-button {
@@ -251,7 +253,7 @@ margin: 0 0 30px 0 ;
 .discount-wrap .discount-container .discount-item {
   width: 32%;
   padding: 30px;
-  background-color: #FDFCE9;
+  
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -585,8 +587,113 @@ margin: 0 0 30px 0 ;
 }
 
 
+/* Contact Us */
+.contact-us-container {
+  padding: 40px 50px;
+  background-color: #FDFCE9;
+  margin: 100px auto;
+  border-radius: 30px;
+  position: relative;
+  width: 80%;
+}
 
-  /* -------------------------------------------------------------------------------------- */
+.contact-us-container .left-side {
+  position: absolute;
+  width: 45%;
+  bottom: 0;
+}
+
+.contact-us-container .right-side {
+  width: 40%;
+  margin-left: auto;
+}
+
+.contact-us-container .right-side .logo {
+  font-weight: 900;
+  text-decoration: underline;
+  font-size: 28px;
+  margin: 0 0 15px 0;
+}
+
+.contact-us-container .right-side .heading {
+  margin: 30px 0;
+}
+
+.contact-us-container .right-side .heading h1 {
+  
+}
+
+.contact-us-container .right-side .description {
+  margin: 30px 0;
+}
+
+.contact-us-container .right-side button {
+  font-size: 18px;
+}
+
+
+
+
+/* ------------------------------- CONTACT US PAGE ------------------------------- */
+
+.contact-us {
+  margin: 100px 0;
+}
+
+.contact-us h1{
+  text-align: center;
+}
+
+.contact-us .contact-us-wrap {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+}
+
+.contact-us .contact-us-wrap .left {
+  width: 47.5%;
+  padding: 15px 30px;
+}
+
+.contact-us .contact-us-wrap .left form {
+  
+}
+
+.contact-us .contact-us-wrap .left form .form-input {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+}
+
+.contact-us .contact-us-wrap .left form .form-input label {
+  
+}
+
+.contact-us .contact-us-wrap .left form .form-input input {
+  padding: 12px 17px;
+  border-radius: 10px;
+  margin: 10px 0;
+  border: 1px solid #666;
+}
+
+.contact-us .contact-us-wrap .left form .form-input textarea {
+  padding: 12px 17px;
+  border-radius: 10px;
+  margin: 10px 0;
+  border: 1px solid #666;
+}
+
+.contact-us .contact-us-wrap .right {
+  width: 47.5%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+
+.contact-us .contact-us-wrap .right iframe {
+  width: 100%;
+  height: 100%;
+}
+
+/* -------------------------------------------------------------------------------------- */
 
 
 /* ------------------------- End Main ------------------------- */
@@ -656,3 +763,70 @@ footer .footer-list-url .footer-url .footer-url_item a {
 
 
 /* ------------------------- End Footer ------------------------- */
+
+
+.list-social-container {
+
+}
+
+.list-social-container .social-item-float {
+  border-radius: 30px;
+  width: 200px;
+  background-color: #F8FAFC;
+  /* border: 1px solid gray; */
+  padding: 10px 15px;
+  margin: 5px 0;
+  transition: all 0.5s;
+  position: fixed;
+  z-index: 10;
+  left: -7.5%;
+  animation: float-social 4s ease-in-out infinite;
+}
+
+.list-social-container .social-item-float:hover {
+  left: -3.3%;
+  background-color: #FDFCE9;
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.25);
+}
+
+.list-social-container .social-item-float .content {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.list-social-container .social-item-float .content span {
+}
+
+.list-social-container .social-item-float .content img {
+  width: 30px;
+  margin: 0 0 0 15px;
+  
+}
+
+
+@keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+    transform: translatey(0px);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+    transform: translatey(-20px);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+    transform: translatey(0px);
+  }
+}
+
+@keyframes float-social {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-20px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
